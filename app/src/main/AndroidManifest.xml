@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zjgsu.timerCompose">
+    <!-- 申请震动权限,用于提醒用户计时结束 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:name="com.zjgsu.timeannouncer.GetContextApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TimerTheme">
+        <activity
+            android:name="com.zjgsu.timeannouncer.Announcer"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zjgsu.timerCompose.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TimerTheme.NoActionBar">
+
+        </activity>
+    </application>
+
+</manifest>
